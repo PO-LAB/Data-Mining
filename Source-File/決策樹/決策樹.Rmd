@@ -1,0 +1,171 @@
+---
+title: "DM---決策樹(Decision Tree)"
+author: "POLab"
+date: "2017/05/19"
+output:
+  html_document:
+      css: style.css
+---
+
+<a href="https://github.com/PO-LAB/Data-Mining" target="_blank">【回到首頁】</a> 
+   
+------
+  
+本篇內容，會繼續介紹一些常用的資料探勘模型：   
+
+
+這裡拿網路上一個公開資料(鐵達尼號的乘客資料)來進行分析，<a href="http://www.rdatamining.com/data/titanic.raw.rdata?attredirects=0&d=1" target="_blank">資料載點如下</a>。   
+
+------ 
+   
+#**決策樹(Decision Tree)**   
+
+無論在分類或預測上，決策樹的演算法都有很好的效果。   
+   
+但它最強大的地方，莫過於樹狀分支的結構：可以明顯呈現分類的規則！與一些機器學習的方法(NN, SVM...)相比，相當容易進行解釋，以及分析規則之間的關係。   
+
+這裡就簡單用CART決策樹來練習，對應的套件是`rpart`，一樣使用上次鐵達尼號的資料：
+
+```{r}
+# 記得要給定資料所在的路徑(path)，例如：我把下載的資料放在C槽下：
+load("C:/titanic.raw.rdata")  #匯入.rdata檔
+```    
+
+```{r, message=F,warning=F}
+require(rpart)
+
+# 先把資料區分成 train=0.8, test=0.2 
+set.seed(22)
+train.index <- sample(x=1:nrow(titanic.raw), size=ceiling(0.8*nrow(titanic.raw) ))
+train <- titanic.raw[train.index, ]
+test <- titanic.raw[-train.index, ]
+
+# CART的模型：把存活與否的變數(Survived)當作Y，剩下的變數當作X
+cart.model<- rpart(Survived ~. , 
+                    data=train)
+
+# 輸出各節點的細部資訊(呈現在console視窗)
+cart.model
+```   
+
+要畫出決策樹(視覺化)，雖然用平常的`plot()`就可以達成   
+   
+但rpart有專屬的繪圖套件`rpart.plot`，函式是`prp()`   
+   
+說真的，用`prp()`畫出來的決策樹，比較好看一些：
+
+```{r, message=F,warning=F}
+require(rpart.plot)	
+prp(cart.model,         # 模型
+    faclen=0,           # 呈現的變數不要縮寫
+    fallen.leaves=TRUE, # 讓樹枝以垂直方式呈現
+    shadow.col="gray",  # 最下面的節點塗上陰影
+    # number of correct classifications / number of observations in that node
+    extra=2)  
+```   
+   
+(最下面節點的數字，代表：**number of correct classifications / number of observations in that node**)   
+   
+根據以上決策樹，可以發現**是男生或女生**其實很重要(因為是第一個分支規則)，其次是在船上的艙位等級。   
+   
+因此，我們可以這樣解釋：   
+
+```
+即使是女性，可是擁有的艙位若是最低下的(3rd)，則大概有一半的死亡機率(82/155=53%)；   
+但當妳的艙位高人一等時，則有相當高的存活機率(197/208=95%)。  
+```    
+
+又或者是：   
+
+```
+當你是男性成人時，大概有八成機率會死(1084/1348=77%)  
+```   
+
+以及
+
+```
+若是男性小孩，就和艙位等級有關：高級艙位的小孩全都獲救(13/13)，可是低艙位的小孩有七成機率(26/37=70%)會死。  
+```   
+
+**(男生好可憐)**   
+
+●也可用另一個繪圖套件`partykit`，函式是`as.party()`和`plot()`
+
+```{r, message=F,warning=F}
+require(partykit)	
+rparty.tree <- as.party(cart.model) # 轉換cart決策樹
+rparty.tree # 輸出各節點的細部資訊
+plot(rparty.tree) 
+``` 
+
+用這個套件畫出來的圖也是蠻容易一目了然的呢!
+有不一樣的感覺~
+
+------
+   
+有決策樹之後，就要進行預測！   
+   
+還記得在線性迴歸使用過的`predict()`嗎？這時就會派上用場囉(在這裡，會同時計算預測準確率)：    
+   
+```{r}
+pred <- predict(cart.model, newdata=test, type="class")
+
+# 用table看預測的情況
+table(real=test$Survived, predict=pred)
+
+# 計算預測準確率 = 對角線的數量/總數量
+confus.matrix <- table(real=test$Survived, predict=pred)
+sum(diag(confus.matrix))/sum(confus.matrix) # 對角線的數量/總數量
+```
+
+------
+
+結果顯示，模型在測試集中的預測能力大約77%，但模型的預測準確率還有提升的可能嗎？我們繼續對模型進行修樹~
+```{r}
+printcp(cart.model) # 先觀察未修剪的樹，CP欄位代表樹的成本複雜度參數
+``` 
+
+```{r}
+plotcp(cart.model) # 畫圖觀察未修剪的樹
+```   
+
+```{r}
+prunetree_cart.model <- prune(cart.model, cp = cart.model$cptable[which.min(cart.model$cptable[,"xerror"]),"CP"]) # 利用能使決策樹具有最小誤差的CP來修剪樹
+```
+
+修剪完決策樹之後，讓我們重新建構一次預測模型
+```{r}
+prunetree_pred <- predict(prunetree_cart.model, newdata=test, type="class")
+
+# 用table看預測的情況
+table(real=test$Survived, predict=prunetree_pred)
+
+prunetree_confus.matrix <- table(real=test$Survived, predict=prunetree_pred)
+sum(diag(prunetree_confus.matrix))/sum(prunetree_confus.matrix) # 對角線的數量/總數量
+```
+
+很顯然，模型的預測準確率並沒有提升，一樣是大約77%，這是因為我們在修剪時所挑選到滿足條件的CP值為**0.01**，而函式`rpart()`預設的CP值就是**0.01**，故前後模型的結果一致。
+
+------
+
+再來，我們爲了避免模型過度擬合(overfitting)，故要利用K-fold Cross-Validation的方法進行交叉驗證，我們使用`caret`這個套件，而K先設定為10次~
+```{r, message=F,warning=F}
+require(caret)
+require(e1071)
+train_control <- trainControl(method="cv", number=10)
+train_control.model <- train(Survived~., data=train, method="rpart", trControl=train_control)
+train_control.model
+```
+
+然而，我們一開始修剪樹之後所得到的決策樹模型，最佳的預測準確率大約為77%，而現在再透過交叉驗證所Tune得的參數，使得模型的最佳預測準確率大約提升為78%。
+
+------
+
+#**總結**    
+
+在資料探勘領域中，決策樹(Decision Tree)是相當常見的方法，例如在醫學研究上，對某種特定的疾病(糖尿病，代謝症候群等)找出可以前期篩檢分類，或是預測的因子時，就常以決策樹的方法來進行，而決策樹較爲不同之處在於可用圖像化來呈現結果，即使不了解背後理論，仍可解讀並判斷。
+
+進行決策樹分析要注意的是，當樣本存在類別不不衡的問題時，決策樹對於小類的樣本根本無能為力，模型的效能會大打折扣。
+
+
+------

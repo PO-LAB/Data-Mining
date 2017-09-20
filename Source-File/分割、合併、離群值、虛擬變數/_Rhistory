@@ -1,0 +1,512 @@
+split_data <- as.data.frame(split_data)
+View(split_data)
+require(datasets)  # source package
+data <- iris
+View(data)
+split_data <- split(data, sample(rep(1:2, 75)))
+split_data <- as.data.frame(split_data)
+View(split_data)
+data <- iris
+subset(data, Sepal.Length > 5)
+subset_data <- subset(data, Sepal.Length > 5) # 只會出現 Sepal.Length > 5 的資料
+View(subset_data)
+# Chunk 1
+require(datasets)  # source package
+data <- iris
+# Chunk 2
+split_data <- split(data, sample(rep(1:2, 75)))
+# Chunk 1
+require(datasets)  # source package
+data <- iris
+# Chunk 2
+split_data <- split(data, sample(rep(1:2, 75)))
+# Chunk 1
+require(datasets)  # source package
+data <- iris
+# Chunk 2
+split_data <- split(data, sample(rep(1:2, 75)))
+# Chunk 1
+require(datasets)  # source package
+data <- iris
+# Chunk 2
+split_data <- split(data, sample(rep(1:2, 75)))
+require(datasets)  # source package
+data <- iris
+subset(data, Sepal.Length > 5) # 只會出現 Sepal.Length > 5 的資料
+require(datasets)  # source package
+data <- iris
+subset(data, Sepal.Length > 5) # 只會出現 Sepal.Length > 5 的資料
+data <- iris
+data <- iris
+subset(data, Sepal.Length > 5) # 只會出現 Sepal.Length > 5 的資料
+subset(data, Sepal.Length > 5)
+data1 <- subset(data, Sepal.Length > 5)
+data2 <- subset(data, Sepal.Length > 5,select = Sepal.Length)
+data3 <- subset(data, Sepal.Length > 5,select = - Sepal.Length
+data3 <- subset(data, Sepal.Length > 5,select = - Sepal.Length)
+data3 <- subset(data, Sepal.Length > 5,select = -Sepal.Length)
+require(datasets)  # source package
+data <- iris
+data1 <- subset(data, Sepal.Length > 5)
+data2 <- subset(data, Sepal.Length > 5,select = Sepal.Length)
+data3 <- subset(data, Sepal.Length > 5,select = -Sepal.Length)
+View(data)
+View(data1)
+View(data)
+View(data1)
+View(data2)
+data2 <- subset(data, Sepal.Length > 5,select = c(Sepal.Length,species))
+data1 <- subset(data, Sepal.Length > 5)
+data2 <- subset(data, Sepal.Length > 5,select = c(Sepal.Length,species))
+data2 <- subset(data, Sepal.Length > 5,select = c("Sepal.Length","species"))
+data1 <- subset(data, Sepal.Length > 5)
+data2 <- subset(data, Sepal.Length > 5,select = c("Sepal.Length","species"))
+data1 <- subset(data, Sepal.Length > 5)
+data <- iris
+data1 <- subset(data, Sepal.Length > 5)
+data2 <- subset(data, Sepal.Length > 5,select = c("Sepal.Length","species"))
+data3 <- subset(data, Sepal.Length > 5,select = -Sepal.Length)
+View(data)
+data2 <- subset(data, Sepal.Length > 5, select = c("Sepal.Length","species"))
+data2 <- subset(data, Sepal.Length > 5, select = Sepal.Length)
+View(data2)
+require(datasets)  # source package
+data <- iris
+data1 <- subset(data, Sepal.Length > 5)
+View(data1)
+data2 <- subset(data, Sepal.Length > 5, select = c("Sepal.Length",))
+data2 <- subset(data, Sepal.Length > 5, select = c("Sepal.Length","species"))
+data2 <- subset(data, Sepal.Length > 5, select = c("Sepal.Length","Species"))
+data3 <- subset(data, Sepal.Length > 5,select = -Sepal.Length)
+View(data2)
+View(data3)
+```{r, results='hide'}
+subset(data, Sepal.Length > 5,select = select = c("Sepal.Length","Species")) # 只會出現 Sepal.Length > 5 的資料且欄位只會出現 Sepal.Length 和 Species
+rbind(x,y)
+cbind(x,y)
+x <- c(1, 2, 3)
+y <- c(10, 20, 5)
+x <- c(1, 2, 3)
+y <- c(10, 20)
+rbind(x,y)
+cbind(x,y)
+y <- c(10, 20, 5)
+rbind(x,y)
+cbind(x,y)
+ID <- c(1,2,3,4)
+Name <- c("A","B","C","D")
+Student1 <- data.frame(ID,Name)
+ID <- c(5,6,7,8)
+Name <- c("E","F","G","H")
+Student2 <- data.frame(ID,Name)
+union(Student1,Student2)
+union()
+Total_student <- rbind(Student1,Student2)
+View(Total_student)
+ID <- c(1,2,3,4)
+Name <- c("A","B","C","D")
+Score <- c(60,70,80,90)
+Sex <- c("M","F","M","M")
+Student1 <- data.frame(ID,Name)
+Student2 <- data.frame(Score,Sex)
+View(Student1)
+View(Student2)
+cbind(Student1,Student2)
+install.packages("outliers")
+---
+title: "R_programming - (5)資料預處理(Data preprocessing)"
+author: "Allan (allan811118@gmail.com)"
+date: "2017/04/22"
+output:
+html_document:
+css: style.css
+---
+<a href="http://rpubs.com/allan811118/R_programming_00" target="_blank">【回到課程大綱】</a>
+------
+本篇內容為「資料預處理」(或者稱**資料清洗**)的手法上。
+畢竟在資料分析的流程中，其實有60~70%的時間是在進行「資料預處理」，如果沒有好的資料，後續的分析其實就可能會有很大的偏誤。
+在「資料預處理」時，我們時常會遇到很多問題需要解決。
+當然，也有有很多對應的小技巧，可以幫助我們處理這些問題。
+首先，因為我們之後會使用到非常多的套件，故必須先更新R的版本至<a href="http://cran.csie.ntu.edu.tw/" target="_blank">【3.4.0】</a> ，而本篇內容有**資料分割**、**資料合併**、**處理離群值(outlier)**和**轉虛擬變數(Dummy variable)**等技巧！
+------
+#**1. 資料分割**
+當我們想要將一個表單切割成不同的子表單時，會使用到以下的函式:
+`split()`、`subset()`，以下會詳細介紹其函式的用法。
+我們再拿我們熟悉的好朋友，鳶尾花資料(iris)來練習吧^_<
+**● 使用`split()`函式進行資料分割:**
+```{r}
+require(datasets)  # source package
+data <- iris
+```
+<img src="1.png"/>
+```{r}
+split_data <- split(data, sample(rep(1:2, 75)))
+```
+<img src="2.png"/>
+由於rep(1:2,75)產生1,2交錯的向量，但加了前面的sample則是隨機抽取，所以向量1,2會被打亂，split會依照sample(rep(1:2,75))分組，都是1的會在同一組，都是2的也會在同一組。
+**● 使用`subset()`函式進行資料分割:**
+```{r, results='hide'}
+require(datasets)  # source package
+data <- iris
+subset(data, Sepal.Length > 5) # 只會出現 Sepal.Length > 5 的資料
+```
+<img src="3.png"/>
+```{r, results='hide'}
+subset(data, Sepal.Length > 5,select = c("Sepal.Length","Species")) # 只會出現 Sepal.Length > 5 的資料且欄位只會出現 Sepal.Length 和 Species
+```
+<img src="4.png"/>
+```{r, results='hide'}
+subset(data, Sepal.Length > 5,select = - Sepal.Length) # selct = 負的代表不要出現的欄位
+```
+<img src="5.png"/>
+------
+#**2. 資料合併**
+當我們想要將兩筆資料合併時，會使用到以下的函式:
+`rbind()`、`cbind()`、`merge()`，以下會詳細介紹其函式的用法。
+**● 使用`rbind()`函式進行資料合併:**
+`rbind()`可以用來追加資料，需要對應欄位(變數)名稱
+```{r, echo=TRUE}
+# 首先先建立兩個 Data frame
+ID <- c(1,2,3,4)
+Name <- c("A","B","C","D")
+Student1 <- data.frame(ID,Name)
+ID <- c(5,6,7,8)
+Name <- c("E","F","G","H")
+Student2 <- data.frame(ID,Name)
+```
+```{r, echo=TRUE}
+# 透過 row 合併
+rbind(Student1,Student2)
+```
+**● 使用`cbind()`函式進行資料合併:**
+`cbind()`可以用來新增變數到原本的資料表單中，不需要對應欄位(變數)名稱
+```{r, echo=TRUE}
+# 首先先建立兩個 Data frame
+ID <- c(1,2,3,4)
+Name <- c("A","B","C","D")
+Score <- c(60,70,80,90)
+Sex <- c("M","F","M","M")
+Student1 <- data.frame(ID,Name)
+Student2 <- data.frame(Score,Sex)
+```
+```{r, echo=TRUE}
+# 透過 column 合併
+cbind(Student1,Student2)
+```
+**● 使用`merge()`函式進行資料合併:**
+`merge()`能夠依據兩個表單中共同有的欄位(變數)名稱來合併資料
+```{r}
+# 首先先建立兩個 data frame
+df1 <- data.frame(CustomerId = c(1:5), Product = c(rep("Toaster", 3), rep("Radio", 2)))
+df2 <- data.frame(CustomerId = c(2, 4, 6), State = c(rep("Alabama", 2), rep("Ohio", 1)))
+```
+<img src="6.png" height="400px" width="300px" />
+將兩個 data frame 透過 "CustomerId" 欄位進行合併:
+```{r}
+#Inner join，保留兩資料集 "CustomerId" 欄位中，取交集的值來合併
+merge(x = df1, y = df2, by = "CustomerId")
+```
+merge 函式的第一、二個參數是指定要合併的資料表，而 by 參數則是指定資料辨識的依據欄位
+```{r}
+#Full join，保留兩資料集 "CustomerId" 欄位中，取聯集的值來合併
+merge(x = df1, y = df2, by = "CustomerId", all = TRUE)
+```
+all 是用來詢問是否顯示所有欄位的資料
+```{r}
+#Left join，保留 x (df1表單) "CustomerId" 欄位中的值來合併
+merge(x = df1, y = df2, by = "CustomerId", all.x = TRUE)
+```
+```{r}
+#Right join，保留 y (df2表單) "CustomerId" 欄位中的值來合併
+merge(x = df1, y = df2, by = "CustomerId", all.y = TRUE)
+```
+要注意，`merge()`僅針對兩筆具有共同變數的資料進行合併，由於`merge()`會針對by參數所指定的變數做交叉比對，因此該變數的編碼值必須是「單一獨立」且不能「重複」。例如「學號」、「身分證號」等，否則merge會出現個案增多的錯誤結果。
+同學們也可以試試看`dplyr`套件來進行資料處理，當資料量很大時，處理速度會比一般的函式還要快一些哦~
+------
+#**3. 處理離群值(outlier)**
+在探勘的流程中，資料中是否存在離群值(outlier)，可能會嚴重影響到資料分析的結果，甚至會影響到模式建立的正確性。
+因此判斷離群值的方法便相當重要，以下將介紹四種以敘述統計為基礎的離群值判斷方法，，包括標準化分數法、Hampel identifier法、盒鬚圖法和截尾平均值法。
+**● 標準化分數判斷法:**
+將資料轉成標準化分數或Z分數進行判斷，根據常態分配的性質，約有99%資料的Z分數會落在平均值的3倍標準差之內，因此Z分數大於3或小於-3的數據將視為離群值(可自訂其他數據為切割點)
+```{r}
+#
+```
+------
+#**4. 轉虛擬變數(Dummy variable)**
+------
+#**總結**
+由於未經處理的資料經常會有資料不完整、不一致或存在雜訊的問題。
+因此在資料預處理時就要將這些問題排除，畢竟往後的分析流程都是延續我們預處理完的資料，有好品質的資料才能挖掘出好品質的資訊。
+加油~
+------
+>####**Reference - skydome20**<a href="https://rpubs.com/skydome20/Table" target="_blank">【R系列筆記】</a>
+View(data)
+scale(data, center,scale)
+scale(data, Sepal.Length,scale)
+scale(x, center=F, scale=T)
+scale(data, center=F, scale=T)
+scale(data$"iris", center=F, scale=T)
+boxplot(data)
+View(data)
+View(df2)
+View(data)
+scale(x, center = TRUE, scale = TRUE)
+scale(data, center = TRUE, scale = TRUE)
+View(data)
+scale(data$"iris", center = TRUE, scale = TRUE)
+scale(data, center = TRUE, scale = TRUE)
+View(Student1)
+data <- subset(data, Sepal.Length > 5,select = - Species)
+scale(data, center = TRUE, scale = TRUE)
+data <- iris
+data <- subset(data,select = - Species)
+data <- iris
+data <- subset(data,select = - Species)
+data <- scale(data, center = TRUE, scale = TRUE)
+View(data)
+data <- subset(data,Sepal.Length > 3)
+data <- subset(data, Sepal.Length > 3)
+data <- subset(data, Sepal.Width > 3)
+data <- iris
+data <- subset(data,select = - Species)
+scale_data <- scale(data, center = TRUE, scale = TRUE)
+View(scale_data)
+boxplot(scale_data)
+boxplot(scale_data)
+summary(scale_data)
+summary <- summary(scale_data)
+(scale_data)
+summary(data)
+boxplot(data)
+data <- iris
+boxplot(data)
+summary(data)
+boxplot(data)
+boxplot(data)
+data <- subset(data,select = - Species)
+boxplot(data)
+summary(data)
+data <- iris
+data <- subset(data,select = - Species)
+scale_data <- scale(data, center = TRUE, scale = TRUE)
+View(scale_data)
+data <- subset(data, Sepal.Width > 2)
+View(data)
+data <- iris
+data <- subset(data,select = - Species)
+scale_data <- scale(data, center = TRUE, scale = TRUE)
+View(scale_data)
+data <- subset(scale_data, Sepal.Width > 2)
+data <- subset(scale_data, Sepal.Length > 2)
+data <- iris
+data <- subset(data,select = - Species)
+scale_data <- scale(data, center = TRUE, scale = TRUE)
+subset(scale_data, Sepal.Length > 2)
+require(datasets)  # source package
+data <- iris
+subset(data, Sepal.Length > 5) # 只會出現 Sepal.Length > 5 的資料
+data <- iris
+data <- subset(data,select = - Species)
+scale_data <- scale(data, center = TRUE, scale = TRUE)
+View(scale_data)
+subset(scale_data, Sepal.Length > 2.0)
+scale_data <- as.data.frame(scale_data)
+subset(scale_data, Sepal.Length > 2.0)
+View(scale_data)
+View(scale_data)
+subset(scale_data, Sepal.Length > 2)
+subset(scale_data, Sepal.Length > 2,Sepal.Width > 2)
+scale_data <- as.data.frame(scale_data)
+subset(scale_data, Sepal.Length > 2,Sepal.Width > 2)
+subset(scale_data, Sepal.Length > 2)
+subset(scale_data, Sepal.Widthh > 2)
+subset(scale_data, Sepal.Width > 2)
+subset(scale_data, Sepal.Length > 2)
+subset(scale_data, Sepal.Width > 2)
+subset(scale_data, Petal.Length > 2)
+subset(scale_data, Petal.Width > 2)
+subset(scale_data, Sepal.Length < -2)
+subset(scale_data, Sepal.Width < -2)
+subset(scale_data, Sepal.Length < 2)
+data <- iris
+data <- subset(data,select = - Species)
+scale_data <- scale(data, center = TRUE, scale = TRUE)
+scale_data <- as.data.frame(scale_data)
+subset(scale_data, Sepal.Length < 2)
+subset(scale_data, Sepal.Length < 2)
+View(scale_data)
+scale_data <- subset(scale_data, Sepal.Length < 2)
+scale_data <- subset(scale_data, Sepal.Width < 2)
+scale_data <- subset(scale_data, Sepal.Length < 2 | Sepal.Width < 2) # 刪除Sepal.Length欄位中，Z分數小於2的值
+data <- iris
+data <- subset(data,select = - Species) # 去除不是數值型態的column
+scale_data <- scale(data, center = TRUE, scale = TRUE) # 標準化表單中的數值
+scale_data <- as.data.frame(scale_data) # 轉成Data frame型態
+scale_data <- subset(scale_data, Sepal.Length < 2 | Sepal.Width < 2) # 刪除Sepal.Length欄位中，Z分數小於2的值
+scale_data <- subset(scale_data, Sepal.Length < 2 | Sepal.Width < 2)
+scale_data <- subset(scale_data, Sepal.Length < 2 | Sepal.Width < 2 )
+scale_data <- subset(scale_data, Sepal.Length < 2 | Sepal.Width < 2 )
+scale_data <- subset(scale_data, Sepal.Length < 2 )
+scale_data <- subset(scale_data, Sepal.Length < 2 || Sepal.Width < 2 )
+scale_data <- subset(scale_data, Sepal.Width < 2 )
+scale_data <- as.data.frame(scale_data)
+data <- subset(data,select = - Species)
+scale_data <- scale(data, center = TRUE, scale = TRUE)
+scale_data <- as.data.frame(scale_data)
+scale_data <- subset(scale_data, Sepal.Width < 2 | Sepal.Width < 2)
+scale_data <- subset(scale_data, Sepal.Width < 2 | Sepal.Width < 2)
+data <- subset(data,select = - Species)
+scale_data <- scale(data, center = TRUE, scale = TRUE)
+scale_data <- as.data.frame(scale_data)
+scale_data <- subset(scale_data, Sepal.Width < 2 | Sepal.Width < 2)
+data <- subset(data,select = - Species)
+scale_data <- scale(data, center = TRUE, scale = TRUE)
+scale_data <- as.data.frame(scale_data)
+View(scale_data)
+scale_data <- subset(scale_data, Sepal.Width < 2 | Sepal.Width < 2)
+scale_data <- subset(scale_data, Sepal.Width < 2 & Sepal.Width < 2)
+scale_data <- scale(data, center = TRUE, scale = TRUE)
+scale_data <- as.data.frame(scale_data)
+scale_data <- subset(scale_data, Sepal.Width < 2 & Sepal.Width < 2)
+data <- iris
+data <- subset(data,select = - Species)
+scale_data <- scale(data, center = TRUE, scale = TRUE)
+scale_data <- as.data.frame(scale_data)
+scale_data <- subset(scale_data, Sepal.Width < 2 & Sepal.Width < 2)
+View(scale_data)
+scale_data <- subset(scale_data, Sepal.Width < 2|Sepal.Width < 2)
+data <- subset(data,select = - Species)
+scale_data <- scale(data, center = TRUE, scale = TRUE)
+scale_data <- as.data.frame(scale_data)
+scale_data <- subset(scale_data, Sepal.Width < 2|Sepal.Width < 2)
+data <- subset(data,select = - Species)
+scale_data <- scale(data, center = TRUE, scale = TRUE)
+scale_data <- as.data.frame(scale_data)
+scale_data <- subset(scale_data, Sepal.Width<2|Sepal.Width<2)
+data <- subset(data,select = - Species)
+scale_data <- scale(data, center = TRUE, scale = TRUE)
+scale_data <- as.data.frame(scale_data)
+View(scale_data)
+scale_data <- subset(scale_data, Sepal.Length < 2 | Sepal.Width < 2)
+scale_data <- subset(scale_data, Sepal.Length < 2 & Sepal.Width < 2)
+scale_data
+scale_data <- subset(scale_data, Sepal.Length < 2 & Sepal.Width < 2 & Petal.Length < 2 & Petal.Width < 2)
+data <- subset(data,select = - Species)
+scale_data <- scale(data, center = TRUE, scale = TRUE)
+scale_data <- as.data.frame(scale_data)
+View(scale_data)
+scale_data <- subset(scale_data, Sepal.Length < 2 & Sepal.Width < 2 & Petal.Length < 2 & Petal.Width < 2)
+scale_data <- subset(scale_data, Sepal.Length > -2 & Sepal.Width > -2 & Petal.Length > -2 & Petal.Width > -2)
+View(scale_data)
+data <- iris
+#data <- subset(data,select = - Species) # 去除不是數值型態的column
+scale_data <- scale(data, center = TRUE, scale = TRUE) # 標準化表單中的數值
+data <- iris
+data <- subset(data,select = - Species)
+scale_data <- scale(data, center = TRUE, scale = TRUE)
+scale_data <- as.data.frame(scale_data)
+data <- iris
+data <- subset(data,select = - Species)
+scale_data <- scale(data, center = TRUE, scale = TRUE)
+scale_data <- subset(scale_data, Sepal.Length < 2 & Sepal.Width < 2 & Petal.Length < 2 & Petal.Width < 2)
+data <- iris
+data <- subset(data,select = - Species)
+scale_data <- scale(data, center = TRUE, scale = TRUE)
+scale_data <- as.data.frame(scale_data)
+scale_data <- subset(scale_data, Sepal.Length < 2 & Sepal.Width < 2 & Petal.Length < 2 & Petal.Width < 2)
+scale_data <- subset(scale_data, Sepal.Length > -2 & Sepal.Width > -2 & Petal.Length > -2 & Petal.Width > -2)
+data <- iris
+data <- subset(data,select = - Species)
+boxplot(data)
+boxplot(data)
+summary(data)
+boxplot(data)
+boxplot(data)
+boxplot(data)
+boxplot$out(data)
+boxplot(data)
+boxplot(data)
+boxplot(data)
+boxplot.stats(data)$out
+boxplot(data) # 繪製盒鬚圖
+data <- iris
+data <- subset(data,select = - Species) # 去除不是數值型態的column
+boxplot(data) # 繪製盒鬚圖
+data <- iris
+data <- subset(data,select = - Species)
+boxplot(data)
+boxplot.stats(data)$out
+data <- iris
+data <- subset(data,select = - Species)
+boxplot(data)
+boxplot(data)
+summary(data)
+data <- iris
+data <- subset(data,select = - Species)
+boxplot(data)
+data1 <- boxplot.stats(data, do.conf = FALSE, do.out = FALSE)
+data1 <- boxplot.stats(data, do.conf = FALSE, do.out = TRUE)
+data1 <- boxplot.stats(data$"iris", do.conf = FALSE, do.out = TRUE)
+data$out
+data <- iris
+data <- subset(data,select = - Species)
+boxplot(data)
+data$out
+bp <- boxplot(c(1,10:20,100,120))
+bp$out
+data <- iris
+data <- subset(data,select = - Species)
+boxplot(data)
+data$out
+summary(data)
+identify(data)
+boxplot(data)
+boxplot(data)
+identify(data)
+summary(data)
+identify(data)
+boxplot(data)
+identify(data)
+boxplot(data)
+data$out
+View(data)
+rm.outlier(data, fill = FALSE, median = FALSE, opposite = FALSE)
+library("outliers", lib.loc="~/R/win-library/3.4")
+data <- iris
+data <- subset(data,select = - Species)
+boxplot(data)
+rm.outlier(data, fill = FALSE, median = FALSE, opposite = FALSE)
+rm.outlier(data$data, fill = FALSE, median = FALSE, opposite = FALSE)
+summary(data)
+summary(data)
+boxplot(data) # 繪製盒鬚圖
+data <- subset(data, Sepal.Width < 4 & Sepal.Width > 2)
+boxplot(data)
+require(datasets)  # source package
+data <- iris
+data <- subset(data,select = - Species) # 去除不是數值型態的column
+boxplot(data) # 繪製盒鬚圖
+summary(data)
+require(datasets)  # source package
+data <- iris
+data <- subset(data,select = - Species) # 去除不是數值型態的column
+boxplot(data) # 繪製盒鬚圖
+summary(data)
+boxplot(data) # 繪製盒鬚圖
+boxplot(data)$out
+View(data)
+rm.outlier(data)
+install.packages("outliers")
+require(outliers)
+rm.outlier(data)
+rm.outlier(data, fill = FALSE, median = FALSE, opposite = FALSE)
+rm.outlier(data, fill = FALSE, median = FALSE, opposite = FALSE)
+boxplot(data)$out
+rm(boxplot(data)$out)
+boxplot(data)$out
+IQR(data)
+x2 <- data[!(data %in% data$out)]
+View(x2)
+View(data)
+boxplot(data) # 繪製盒鬚圖
+x2 <- data[!(data %in% data$out)]

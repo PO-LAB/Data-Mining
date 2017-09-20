@@ -1,0 +1,179 @@
+---
+title: "DM---關聯式規則(Association rule)"
+author: "POLab"
+date: "2017/05/19"
+output:
+  html_document:
+      css: style.css
+---
+
+<a href="https://github.com/PO-LAB/Data-Mining" target="_blank">【回到首頁】</a> 
+   
+------
+  
+本篇內容會介紹關聯式規則(Association rule)的資料探勘模型。
+
+首先，還是要再提醒一下，記得要更新R的版本至<a href="http://cran.csie.ntu.edu.tw/" target="_blank">【3.4.0】</a>唷！而之後會用到的`arules`套件版本為<a href="https://cran.r-project.org/web/packages/arules/index.html" target="_blank">【1.5-2】</a>
+
+------
+   
+#**關聯式規則(Apriori)**   
+   
+這裡拿網路上一個公開資料(鐵達尼號的乘客資料)來進行分析，<a href="http://www.rdatamining.com/data/titanic.raw.rdata?attredirects=0&d=1" target="_blank">資料載點如下</a>。   
+
+下載之後，你會發現資料的型態並非熟悉的.csv。   
+   
+因此我們要用**函式**把資料匯入到R裡面，使用的函式是`load()`：   
+
+```{r}
+# 記得要給定資料所在的路徑(path)，例如：我把下載的資料放在C槽下：
+load("C:/titanic.raw.rdata")  #匯入.rdata檔
+```   
+   
+**(補充：如果我們要匯入.csv檔，除了之前教的"Import Dataset"方法以外，也可以用函式`read.csv()`)**   
+```{r, eval=FALSE}
+data <- read.csv("C:/Users/Allan/Desktop/R_programmimg/Allan/06/data.csv")
+```
+   
+   
+並且用`str()`看這筆資料的狀態
+```{r}
+str(titanic.raw)
+```
+
+可以發現資料裡面有四個欄位：
+
+1. Class：乘客的艙位等級  
+
+2. Sex：乘客性別    
+
+3. Age ：乘客年齡   
+
+4. Survived：沉船之後，乘客是否存活？
+
+   
+關於鐵達尼號的故事，大家應該都耳熟能詳。而當我們說「女性比較容易存活」、以及「男性船員幾乎活不下來」，相信也沒人會反對吧？但是凡事講求證據~   
+   
+事實上證明其實並不難，而其中一個方法，就是本篇即將用到的第一個方法：**關聯式規則(apriori)**！(對應的套件：`arules`)
+   
+```{r, message=F, warning=F, results='hide'}
+require(arules) # apriori關聯式規則的套件
+```
+
+還記得apriori演算法是怎麼運作的嗎？我們需要設定：
+
+* 最小支持度(min support)：「規則」在資料內具有普遍性   
+
+* 最小信賴度(min confidence)：「規則」要有一定的信心水準   
+
+   
+而我們想要探討的規則，形式如下：「在A情況下，會存活與否」   
+   
+換句話說，可以寫成**A => 存活與否**，所以把Survived這個變數放在`=>`的右手邊(right hand side)
+
+```{r, results='hide'}
+# apriori rules with rhs containing "Survived" only
+
+rule <- apriori(titanic.raw, 
+                # min support & confidence, 最小規則長度(lhs+rhs)
+                parameter=list(minlen=3, supp=0.1, conf=0.7),  
+                appearance = list(default="lhs",
+                                  rhs=c("Survived=No", "Survived=Yes") 
+                                  # 右手邊顯示的特徵
+                                  )
+                )  
+```   
+
+要觀察rule需要使用`inspect()`的函式：
+
+```{r}
+inspect(rule)
+```
+   
+根據lift，由大到小排序rule：   
+```{r}
+sort.rule <- sort(rule, by="lift")
+inspect(sort.rule)
+```
+
+看第一個關聯規則：「若身分是成人女性 => 則會存活」，lift=2.3 > 1，表示預測結果比原本表現好。   
+
+然而，有發現到問題嗎？   
+   
+第六個關聯規則(#編號8)「若身分是男性成人船員 => 不會存活」，對比於第五個關聯規則(#編號4)：「若身分是男性船員 => 不會存活」，其實看不到任何有用的資訊！   
+   
+而且，第六個規則的lift <= 第五個規則的lift，   當發生這樣的情況時，我們就可以說：第六個關聯規則是**多餘的(redundant)**。   
+   
+多餘的關聯規則，會造成分析上的雜訊，因此需要刪除它們，但該怎麼做呢？   
+   
+首先，先看某項規則是否為其他規則的子集(subset)：
+```{r}
+subset.matrix <- as.matrix(is.subset(x=sort.rule, y=sort.rule))
+```
+輸出的格式會像這樣：
+
+<img src="2.png" />   
+
+上面的結果要解釋很簡單：在X的項目，如果是Y項目的子集(subset)，就會回傳TRUE。   
+(當你用RStudio打開**subset.matrix**這個變數時，會看見一個8x8的矩陣)
+
+之後再進行以下步驟：
+```{r}
+# 把這個矩陣的下三角去除，只留上三角的資訊
+subset.matrix[lower.tri(subset.matrix, diag=T)] <- NA
+
+# 計算每個column中TRUE的個數，若有一個以上的TRUE，代表此column是多餘的
+redundant <- colSums(subset.matrix, na.rm=T) >= 1
+
+# 移除多餘的規則
+sort.rule <- sort.rule[!redundant]
+
+inspect(sort.rule)
+```
+經過以上步驟後，多餘的規則消失了！   
+
+在R裡面，關聯式規則還提供一個視覺化的套件`arulesViz`，可以觀察每條規則的三項指標分布情況：
+
+```{r,message=F, warning=F }
+require(arulesViz)
+plot(sort.rule)
+```
+
+而且也可以將規則視覺化，知道當初災難發生以後，在什麼樣的條件下比較容易存活/死亡：
+```{r}
+plot(sort.rule, method="graph", control=list(type="items"))
+plot(sort.rule, method="grouped")
+```
+
+現在對照一開始的假設：**「女性比較容易存活」、「男性船員幾乎死光光」**...(好殘酷)！   
+
+而這些規則就是我們的證據了！   
+
+
+------
+   
+#**總結**  
+
+和一些機器學習方法只會專注在「預測準確率」的概念不太一樣，，關聯式規則在「解釋」上具有十分強大的優勢。   
+
+的確，在現實中，有時候確實只要「高的預測準確率」的模型，就可以達成許多目標。    
+   
+可是也千萬別忘記了，我們正在進行的是「資料分析」，也就是去「解釋」資料中的故事。   
+   
+事實上，有時候這個步驟反而會比「準確率」還重要。這一點，稍微思考一下就能理解了：唯有去探討資料的故事，才有機會發現到**有趣的跡象、失敗的原因、違背直覺的現象......**等等。   
+
+
+------
+   
+#**Reference**  
+
+<a href="http://www.rdatamining.com/examples/association-rules
+" target="_blank">http://www.rdatamining.com/examples/association-rules
+</a>   
+   
+
+<a href="https://www.kaggle.com/c/titanic
+" target="_blank">https://www.kaggle.com/c/titanic
+</a>   
+
+------
