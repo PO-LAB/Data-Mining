@@ -7,7 +7,9 @@
      
 開課教師為[李家岩](http://polab.imis.ncku.edu.tw/Bio.html)老師   
 
-是由國立成功大學工程管理在職專班所開授的進階課程，鼓勵學生進行案例探討、分析與實作。    
+是由國立成功大學工程管理在職專班所開授的進階課程，
+內容主要以資料科學(Data Science)與大數據(Big Data)，
+鼓勵學生進行案例探討、分析與實作。
 
 
 
@@ -32,7 +34,7 @@
    
 |  更新時間       |                      文章                                                                               |
 |  :-----------:  | :-----------------------------------------------------------------------------------------------------: |
-|  2017-05-19     | [安裝R與RStudio](https://po-lab.github.io/Data-Mining/Source-File/安裝R與RStudio/安裝R與RStudio.html)   | 
+|  2017-05-19     | [安裝R與RStudio](https://rpubs.com/skydome20/R1-R_and_RStudio)   | 
 
 
     
@@ -44,9 +46,9 @@
 
 |  更新時間       |                      文章                                                                                             |
 | :-----------:   |:-----------------------------------------------------------------------------------------------------:                |
-|  2017-05-19     | [基本資料型態](https://po-lab.github.io/Data-Mining/Source-File/基本資料型態/基本資料型態.html)                       | 
-|  2017-05-19     | [套件與函式](https://po-lab.github.io/Data-Mining/Source-File/套件與函式/套件與函式.html)                             | 
-|  2017-05-19     | [流程控制(for, while, ifelse, switch)](https://po-lab.github.io/Data-Mining/Source-File/流程控制/流程控制.html)       | 
+|  2017-05-19     | [基本資料型態](https://rpubs.com/skydome20/R-Note2-dataType)                       | 
+|  2017-05-19     | [套件與函式](https://rpubs.com/skydome20/R-Note3-function_and_package)                             | 
+|  2017-05-19     | [流程控制(for, while, ifelse, switch)](http://rpubs.com/skydome20/R-Note11-Control_Flow)       | 
 
 
 
@@ -54,12 +56,12 @@
 
 
    
-## **￡資料處理**   
+## **￡資料預處理**   
    
 |  更新時間       |                      文章                                                                                                                        |
 | :-----------: | :-----------------------------------------------------------------------------------------------------:                                            |
 |  2017-05-19     | [分割、合併、離群值、虛擬變數](https://po-lab.github.io/Data-Mining/Source-File/分割、合併、離群值、虛擬變數/分割、合併、離群值、虛擬變數.html)  | 
-|  2017-05-19     | [遺漏值處理(Impute Missing Value)](https://po-lab.github.io/Data-Mining/Source-File/遺漏值處理/遺漏值處理.html)                                  | 
+|  2017-05-19     | [遺漏值處理(Impute Missing Value)](http://www.rpubs.com/skydome20/R-Note10-Missing_Value)                                  | 
 
 --------------------------------------------------------------------------------------------------------------------------------   
 
@@ -69,7 +71,7 @@
 
 |  更新時間       |                      文章                                                                                      |
 |  :-----------: | :-----------------------------------------------------------------------------------------------------:         |
-|  2017-05-19     | [繪圖–資料視覺化](https://po-lab.github.io/Data-Mining/Source-File/繪圖–資料視覺化/繪圖–資料視覺化.html)       |
+|  2017-05-19     | [繪圖–資料視覺化](http://rpubs.com/skydome20/R-Note4-Plotting_System)       |
 
 
 --------------------------------------------------------------------------------------------------------------------------------
@@ -82,12 +84,17 @@
 
 |  更新時間       |                      文章                                                                                                       |
 | :-----------:  | :-----------------------------------------------------------------------------------------------------:                          |
-|  2017-05-19     | [線性迴歸、變異數分析(ANOVA)](https://po-lab.github.io/Data-Mining/Source-File/線性迴歸、變異數分析/線性迴歸、變異數分析.html)  | 
-|  2017-05-19     | [關聯式規則(Association rule)](https://po-lab.github.io/Data-Mining/Source-File/關聯式規則/關聯式規則.html)                     | 
-|  2017-05-19     | [決策樹(Decision Tree)](https://po-lab.github.io/Data-Mining/Source-File/決策樹/決策樹.html)                                    | 
-|  2017-05-19     | [類神經網路(BPN)](https://po-lab.github.io/Data-Mining/Source-File/類神經網路/類神經網路.html)                                  | 
-|  2017-05-19     | [主成份分析(PCA)](https://po-lab.github.io/Data-Mining/Source-File/主成份分析/主成份分析.html)                                  | 
-|  2017-05-19     | [分群分析(Clustering)](https://po-lab.github.io/Data-Mining/Source-File/分群分析/分群分析.html)                                 | 
+|  2017-05-19     | [線性迴歸、變異數分析(ANOVA)](http://rpubs.com/skydome20/R-Note5-First_Practice) | 
+|  2017-05-19     | [關聯式規則(Association rule)](http://www.rpubs.com/skydome20/R-Note6-Apriori-DecisionTree)         | 
+|  2017-05-19     | [特徵選取(Feature Selection)：逐步迴歸(Stepwise Regression)與套索迴歸(LASSO)]()        | 
+|  2017-05-19     | [特徵萃取(Feature Extration)：主成份分析(PCA)與獨立成分分析(ICA)](http://rpubs.com/skydome20/R-Note7-PCA)   | 
+|  2017-05-19     | [決策樹(Decision Tree):分類與迴歸樹CART](http://www.rpubs.com/skydome20/R-Note6-Apriori-DecisionTree)   | 
+|  2017-05-19     | [類神經網路(BPN)](http://rpubs.com/skydome20/R-Note8-ANN)  | 
+|  2017-05-19     | [深度學習(Deep Learning)](http://rpubs.com/skydome20/R-Note12-DigitRecognizer-Kaggle)    | 
+|  2017-05-19     | [分群分析(Clustering)：華德法(Ward)與K平均法(K-means)](http://www.rpubs.com/skydome20/R-Note9-Clustering)   | 
+|  2017-05-19     | [分群分析(Clustering)：自我映射組織(SOM)與模糊適應共振理論(Fuzzy-ART)]()   | 
+|  2017-05-19     | [支援向量機(Support Vector Machine)](http://rpubs.com/skydome20/R-Note14-SVM-SVR)   |
+|  2017-05-19     | [集成算法(Emsemble Method)：隨機森林(Random Forest)與梯度推進(Gradient Boosting)]()   |
 
 
 
