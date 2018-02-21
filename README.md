@@ -7,11 +7,17 @@
      
 開課教師為[李家岩](http://polab.imis.ncku.edu.tw/Bio.html)老師   
 
-是由國立成功大學工程管理在職專班所開授的進階課程，
-內容主要以資料科學(Data Science)與大數據(Big Data)，
+是由國立成功大學工學院工程管理在職專班所開授的進階課程，
+內容主要為資料科學(Data Science)與大數據(Big Data)，
 鼓勵學生進行案例探討、分析與實作。
 
+課程參考書目(Reference):
+1. [Gareth James, Daniela Witten, Trevor Hastie and Robert Tibshirani, 2014. An Introduction to Statistical Learning with Applications in R. Springer.](http://www-bcf.usc.edu/~gareth/ISL/)
+2. [Hastie, T., R. Tibshirani, and J. Friedman, 2009. The Elements of Statistical Learning: Data Mining, Inference, and Prediction. 2nd ed., Springer.](https://web.stanford.edu/~hastie/ElemStatLearn/)
+
+
 本教學內容主要為資料科學家Skydome20的[R系列筆記](http://rpubs.com/skydome20/Table)，一併致謝。
+
 
 
 ### **助教群**    
