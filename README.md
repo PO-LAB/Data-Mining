@@ -5,9 +5,9 @@
 
 此網頁為[資料探勘課程](http://course-query.acad.ncku.edu.tw/crm/course_map/course.php?dept=N0&cono=N061700)的R程式實作教學   
      
-開課教師為[李家岩](http://polab.imis.ncku.edu.tw/Bio.html)老師   
+開課教師為[李家岩](http://polab.imis.ncku.edu.tw/Bio.html)老師   
 
-是由國立成功大學工學院工程管理在職專班所開授的進階課程，
+由國立成功大學工學院工程管理在職專班所開授的進階課程，
 內容主要為資料科學(Data Science)與大數據(Big Data)，
 鼓勵學生進行案例探討、分析與實作。
 
@@ -91,12 +91,12 @@
 
 |  更新時間       |                      文章                                                                                                       |
 | :-----------:  | :-----------------------------------------------------------------------------------------------------:                          |
-|  2017-05-19     | [線性迴歸、變異數分析(ANOVA)](http://rpubs.com/skydome20/R-Note5-First_Practice) | 
-|  2017-05-19     | [關聯式規則(Association rule)](http://www.rpubs.com/skydome20/R-Note6-Apriori-DecisionTree)         | 
+|  2017-05-19     | [線性迴歸與變異數分析(Linear Regression)](http://rpubs.com/skydome20/R-Note5-First_Practice) | 
+|  2017-05-19     | [關聯式規則(Association Rule)](http://www.rpubs.com/skydome20/R-Note6-Apriori-DecisionTree)         | 
 |  2017-05-19     | [特徵選取(Feature Selection)：逐步迴歸(Stepwise Regression)與套索迴歸(LASSO)]()        | 
-|  2017-05-19     | [特徵萃取(Feature Extration)：主成份分析(PCA)與獨立成分分析(ICA)](http://rpubs.com/skydome20/R-Note7-PCA)   | 
+|  2017-05-19     | [特徵萃取(Feature Extraction)：主成份分析(PCA)與獨立成分分析(ICA)](http://rpubs.com/skydome20/R-Note7-PCA)   | 
 |  2017-05-19     | [決策樹(Decision Tree):分類與迴歸樹CART](http://www.rpubs.com/skydome20/R-Note6-Apriori-DecisionTree)   | 
-|  2017-05-19     | [類神經網路(BPN)](http://rpubs.com/skydome20/R-Note8-ANN)  | 
+|  2017-05-19     | [類神經網路(Neural Networks)：倒傳遞類神經網路(Backpropagation)](http://rpubs.com/skydome20/R-Note8-ANN)  | 
 |  2017-05-19     | [深度學習(Deep Learning)](http://rpubs.com/skydome20/R-Note12-DigitRecognizer-Kaggle)    | 
 |  2017-05-19     | [分群分析(Clustering)：華德法(Ward)與K平均法(K-means)](http://www.rpubs.com/skydome20/R-Note9-Clustering)   | 
 |  2017-05-19     | [分群分析(Clustering)：自我映射組織(SOM)與模糊適應共振理論(Fuzzy-ART)]()   | 
