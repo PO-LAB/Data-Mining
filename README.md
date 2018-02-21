@@ -11,6 +11,7 @@
 內容主要以資料科學(Data Science)與大數據(Big Data)，
 鼓勵學生進行案例探討、分析與實作。
 
+本教學內容主要為資料科學家Skydome20的[R系列筆記](http://rpubs.com/skydome20/Table)，一併致謝。
 
 
 ### **助教群**    
