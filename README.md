@@ -101,7 +101,7 @@
 |  2017-05-19     | [分群分析(Clustering)：華德法(Ward)與K平均法(K-means)](http://www.rpubs.com/skydome20/R-Note9-Clustering)   | 
 |  2017-05-19     | [分群分析(Clustering)：自我映射組織(SOM)與模糊適應共振理論(Fuzzy-ART)]()   | 
 |  2017-05-19     | [支援向量機(Support Vector Machine)](http://rpubs.com/skydome20/R-Note14-SVM-SVR)   |
-|  2017-05-19     | [集成算法(Emsemble Method)：隨機森林(Random Forest)與梯度推進(Gradient Boosting)]()   |
+|  2017-05-19     | [集成算法(Ensemble Method)：隨機森林(Random Forest)與梯度推進(Gradient Boosting)]()   |
 
 
 
