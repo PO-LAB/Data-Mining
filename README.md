@@ -89,10 +89,10 @@
    
    
 
-|  更新時間       |                      文章                                                                                                       |
-| :-----------:  | :-----------------------------------------------------------------------------------------------------:                          |
+|  更新時間       |                      文章                    |                                                                                   |
+| :-----------:  | :-----------------------------------------------------------------------------------------------------: |                         |
 |  2017-05-19     | [線性迴歸與變異數分析(Linear Regression)](http://rpubs.com/skydome20/R-Note5-First_Practice) | 
-|  2017-05-19     | [關聯式規則(Association Rule)](http://www.rpubs.com/skydome20/R-Note6-Apriori-DecisionTree)         | a|
+|  2017-05-19     | [關聯式規則(Association Rule)](http://www.rpubs.com/skydome20/R-Note6-Apriori-DecisionTree)         | 
 |  2017-05-19     | [特徵選取(Feature Selection)：逐步迴歸(Stepwise Regression)與套索迴歸(LASSO)]()        | 
 |  2017-05-19     | [特徵萃取(Feature Extraction)：主成份分析(PCA)與獨立成分分析(ICA)](http://rpubs.com/skydome20/R-Note7-PCA)   | 
 |  2017-05-19     | [決策樹(Decision Tree):分類與迴歸樹CART](http://www.rpubs.com/skydome20/R-Note6-Apriori-DecisionTree)   | 
