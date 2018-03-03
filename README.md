@@ -93,15 +93,15 @@
 | :-----------:  | :-----------------------------------------------------------------------------------------------------:                        |
 |  2017-05-19     | [線性迴歸與變異數分析(Linear Regression)](http://rpubs.com/skydome20/R-Note5-First_Practice)  | 
 |  2017-05-19     | [關聯式規則(Association Rule)](http://www.rpubs.com/skydome20/R-Note6-Apriori-DecisionTree)         | 
-|  2017-05-19     | [特徵選取(Feature Selection)：逐步迴歸(Stepwise Regression)與套索迴歸(LASSO)](http://rpubs.com/skydome20/R-Note18-Subsets_Shrinkage_Methods)        | 
-|  2017-05-19     | 特徵萃取(Feature Extraction)：[主成份分析(PCA)](http://rpubs.com/skydome20/R-Note7-PCA)與[獨立成分分析(ICA)](http://rpubs.com/skydome20/R-Note17-ICA)   | 
+|  2018-03-03     | [特徵選取(Feature Selection)：逐步迴歸(Stepwise Regression)與套索迴歸(LASSO)](http://rpubs.com/skydome20/R-Note18-Subsets_Shrinkage_Methods)        | 
+|  2018-03-03     | 特徵萃取(Feature Extraction)：[主成份分析(PCA)](http://rpubs.com/skydome20/R-Note7-PCA)與[獨立成分分析(ICA)](http://rpubs.com/skydome20/R-Note17-ICA)   | 
 |  2017-05-19     | [決策樹(Decision Tree):分類與迴歸樹CART](http://www.rpubs.com/skydome20/R-Note6-Apriori-DecisionTree)   | 
 |  2017-05-19     | [類神經網路(Neural Networks)：倒傳遞類神經網路(Backpropagation)](http://rpubs.com/skydome20/R-Note8-ANN)  | 
 |  2017-05-19     | [深度學習(Deep Learning)](http://rpubs.com/skydome20/R-Note12-DigitRecognizer-Kaggle)    | 
 |  2017-05-19     | [分群分析(Clustering)：華德法(Ward)與K平均法(K-means)](http://www.rpubs.com/skydome20/R-Note9-Clustering)   | 
 |  2017-05-19     | [分群分析(Clustering)：自我映射組織(SOM)與模糊適應共振理論(Fuzzy-ART)]   | 
 |  2017-05-19     | [支援向量機(Support Vector Machine)](http://rpubs.com/skydome20/R-Note14-SVM-SVR)   |
-|  2017-05-19     | [集成算法(Ensemble Method)：隨機森林(Random Forest)與梯度推進(Gradient Boosting)](http://rpubs.com/skydome20/R-Note16-Ensemble_Learning)   |
+|  2018-03-03     | [集成算法(Ensemble Method)：隨機森林(Random Forest)與梯度推進(Gradient Boosting)](http://rpubs.com/skydome20/R-Note16-Ensemble_Learning)   |
 
 
 
