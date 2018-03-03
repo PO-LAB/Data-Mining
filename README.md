@@ -16,7 +16,7 @@
 2. [Hastie, T., R. Tibshirani, and J. Friedman, 2009. The Elements of Statistical Learning: Data Mining, Inference, and Prediction. 2nd ed., Springer.](https://web.stanford.edu/~hastie/ElemStatLearn/)
 
 
-本教學內容主要為資料科學家skydome20的[R系列筆記](http://rpubs.com/skydome20/Table)，一併致謝。
+本教學內容主要為資料科學家[skydome20的R系列筆記](https://github.com/skydome20/R-Notes)，一併致謝。
 
 
 
