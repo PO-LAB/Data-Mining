@@ -16,7 +16,7 @@
 2. [Hastie, T., R. Tibshirani, and J. Friedman, 2009. The Elements of Statistical Learning: Data Mining, Inference, and Prediction. 2nd ed., Springer.](https://web.stanford.edu/~hastie/ElemStatLearn/)
 
 
-本教學內容主要為資料科學家[skydome20的R系列筆記](https://github.com/skydome20/R-Notes)，一併致謝。
+本教學內容主要為資料科學家 [skydome20的R系列筆記](https://github.com/skydome20/R-Notes) ，一併致謝。
 
 
 
@@ -28,8 +28,8 @@
 [4]: http://rpubs.com/jeff_datascience/DS_Notebook
 
 
-| 擔任年份   |  助教        |    暱稱         |                      LinkedIn             | E-mail                                               |
-|:---------: | :-----------:|:-----------:|:-----------:     |:---------------------------------------------------------------------------------------:|
+| 擔任年份    |  助教        |    暱稱         |         LinkedIn                           | E-mail |
+|:---------: | :----------:|:---------------:|:-----------:     |:---------------------------------------------------------------------------------------:|
 | 2018       | 洪佑鑫       | [Jeff][4]       | https://www.linkedin.com/in/hungyuhsin/    | s903941@yahoo.com.tw |
 | 2018       | 吳昭賢       | [James][3]      |                                            | new393988911@gmail.com |
 | 2017       | 周百建       | [Allan][2]      | https://www.linkedin.com/in/iamallanchou   |    |
@@ -37,8 +37,7 @@
 | 2016       | 洪紹嚴       | [skydome20][1]  | https://www.linkedin.com/in/skydome20      |    |
 
 
-2017       	洪佑鑫      	Jeff     	s903941@yahoo.com.tw
-2017       	吳昭賢      	James     	new393988911@gmail.com
+
 
 --------------------------------------------------------------------------------------------------------------------------------
   
