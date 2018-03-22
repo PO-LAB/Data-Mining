@@ -3,7 +3,7 @@
 
 ## **課程概述**
 
-此 [資料探勘課程](http://course-query.acad.ncku.edu.tw/crm/course_map/course.php?dept=N0&cono=N061700) 是國立成功大學工學院工程管理在職專班所開授的進階課程，開課教師為[李家岩](http://polab.imis.ncku.edu.tw/Bio.html)老師。內容主要為資料科學(Data Science)與大數據(Big Data)，鼓勵學生進行案例探討、分析與實作。 此 Github 網站為延伸教學資源，與 R 語言實作教學有關。
+本 [資料探勘課程](http://course-query.acad.ncku.edu.tw/crm/course_map/course.php?dept=N0&cono=N061700) 是國立成功大學工學院工程管理在職專班所開授的進階課程，開課教師為[李家岩](http://polab.imis.ncku.edu.tw/Bio.html)老師。內容主要為資料科學(Data Science)與大數據(Big Data)，鼓勵學生進行案例探討、分析與實作。 此 Github 網站為延伸教學資源，與 R 語言實作教學有關。
 
 課程參考書目(Reference):
 1. [Gareth James, Daniela Witten, Trevor Hastie and Robert Tibshirani, 2014. An Introduction to Statistical Learning with Applications in R. Springer.](http://www-bcf.usc.edu/~gareth/ISL/)
