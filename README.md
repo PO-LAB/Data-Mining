@@ -24,12 +24,14 @@
  
 [1]: http://rpubs.com/skydome20/Table
 [2]: http://rpubs.com/allan811118/R_programming_00
+[3]: http://rpubs.com/james_datacatcher
+[4]: http://rpubs.com/jeff_datascience/DS_Notebook
 
 
 | 擔任年份   |  助教        |    暱稱         |                      LinkedIn             | E-mail                                               |
 |:---------: | :-----------:|:-----------:|:-----------:     |:---------------------------------------------------------------------------------------: |
-| 2018       | 洪佑鑫       | [Jeff][2]      |      |  s903941@yahoo.com.tw |
-| 2018       | 吳昭賢       | [James][2]      |     | new393988911@gmail.com |
+| 2018       | 洪佑鑫       | [Jeff][4]      |  https://www.linkedin.com/in/hungyuhsin/        |  s903941@yahoo.com.tw |
+| 2018       | 吳昭賢       | [James][3]      |     | new393988911@gmail.com |
 | 2017       | 周百建       | [Allan][2]      | [https://www.linkedin.com/in/iamallanchou](https://www.linkedin.com/in/iamallanchou)     |    |
 | 2017       | 張博凱       | Bokai           | [https://www.linkedin.com/in/bo-kai-Jang](https://www.linkedin.com/in/bo-kai-Jang)       |    |
 | 2016       | 洪紹嚴       | [skydome20][1]  | [https://www.linkedin.com/in/skydome20](https://www.linkedin.com/in/skydome20)           |    |
