@@ -26,7 +26,7 @@
 | 擔任年份    |  助教        |    暱稱         |         LinkedIn                           | E-mail |
 |:---------: | :----------:|:---------------:|:-----------:     |:---------------------------------------------------------------------------------------:|
 | 2018       | 洪佑鑫       | [Jeff][4]       | https://www.linkedin.com/in/hungyuhsin/    | s903941@yahoo.com.tw |
-| 2018       | 吳昭賢       | [James][3]      |                                            | new393988911@gmail.com |
+| 2018       | 吳昭賢       | [James][3]      | https://www.linkedin.com/in/iamjameswu/    | new393988911@gmail.com |
 | 2017       | 周百建       | [Allan][2]      | https://www.linkedin.com/in/iamallanchou   |    |
 | 2017       | 張博凱       | Bokai           | https://www.linkedin.com/in/bo-kai-Jang    |    |
 | 2016       | 洪紹嚴       | [skydome20][1]  | https://www.linkedin.com/in/skydome20      |    |
