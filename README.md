@@ -94,6 +94,6 @@
 |  2017-05-19     | [分群分析(Clustering)：自我映射組織(SOM)與模糊適應共振理論(Fuzzy-ART)]   | 
 |  2017-05-19     | [支援向量機(Support Vector Machine)](http://rpubs.com/skydome20/R-Note14-SVM-SVR)   |
 |  2018-03-03     | [集成算法(Ensemble Method)：隨機森林(Random Forest)與梯度推進(Gradient Boosting)](http://rpubs.com/skydome20/R-Note16-Ensemble_Learning)   |
-
+|  2019-02-21     | [總結(Summary)：Comparison of 13 Algorithms in 165 Datasets](https://machinelearningmastery.com/start-with-gradient-boosting/)   |
 
 
