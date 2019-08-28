@@ -4,7 +4,9 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 
-[資料探勘課程](http://course-query.acad.ncku.edu.tw/crm/course_map/course.php?dept=N0&cono=N061700) 是國立成功大學工學院工程管理在職專班所開授的進階課程，開課教師為[李家岩](http://polab.imis.ncku.edu.tw/Bio.html)老師。內容主要為資料科學(Data Science)與大數據(Big Data)，鼓勵學生進行案例探討、分析與實作。 此 Github 網站為延伸教學資源，與 R 語言實作教學有關。
+[資料探勘課程](http://course-query.acad.ncku.edu.tw/crm/course_map/course.php?dept=N0&cono=N061700) 是國立成功大學工學院工程管理在職專班所開授的進階課程，開課教師為[李家岩](http://polab.imis.ncku.edu.tw/Bio.html)老師。
+
+內容主要為資料科學(Data Science)與大數據(Big Data)，鼓勵學生進行案例探討、分析與實作。 此 Github 網站為延伸教學資源，與 R 語言實作教學有關。
 
 課程參考書目(Reference):
 1. [Gareth James, Daniela Witten, Trevor Hastie and Robert Tibshirani, 2014. An Introduction to Statistical Learning with Applications in R. Springer.](http://www-bcf.usc.edu/~gareth/ISL/)
@@ -12,6 +14,8 @@
 
 
 此 Github 網站內容主要為資料科學家 [skydome20的R系列筆記](https://github.com/skydome20/R-Notes) ，一併致謝。
+
+好文分享：[What’s next for the popular programming language R?](https://qz.com/1661487/hadley-wickham-on-the-future-of-r-python-and-the-tidyverse/)
 
 --------------------------------------------------------------------------------------------------------------------------------
 
