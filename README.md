@@ -15,7 +15,7 @@
 
 此 Github 網站內容主要為資料科學家 [skydome20的R系列筆記](https://github.com/skydome20/R-Notes) ，一併致謝。
 
-好文分享：[What’s next for the popular programming language R?](https://qz.com/1661487/hadley-wickham-on-the-future-of-r-python-and-the-tidyverse/)
+※好文分享：[2019/08/17-What’s next for the popular programming language R?](https://qz.com/1661487/hadley-wickham-on-the-future-of-r-python-and-the-tidyverse/)
 
 --------------------------------------------------------------------------------------------------------------------------------
 
