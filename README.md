@@ -30,8 +30,8 @@
 
 | 擔任年份    |  助教        |    暱稱         |         LinkedIn                           | E-mail |
 |:---------: | :----------:|:---------------:|:-----------:     |:---------------------------------------------------------------------------------------:|
-| 2019      | 詹京哲       | Ginger      | https://www.linkedin.com/in/ginger-zhan    | bmw2142@gmail.com |
-| 2019      | 鄭宇翔       | [Jacky][5]      | https://www.linkedin.com/in/yu-hsiang-cheng-2894b4169/    | zxcv9100207@gmail.com |
+| 2019下    | 詹京哲   | Ginger      | https://www.linkedin.com/in/ginger-zhan    | bmw2142@gmail.com |
+| 2019    | 鄭宇翔    | [Jacky][5]      | https://www.linkedin.com/in/yu-hsiang-cheng-2894b4169/    | zxcv9100207@gmail.com |
 | 2018       | 洪佑鑫       | [Jeff][4]       | https://www.linkedin.com/in/hungyuhsin/    | s903941@yahoo.com.tw |
 | 2018       | 吳昭賢       | [James][3]      | https://www.linkedin.com/in/iamjameswu/    | new393988911@gmail.com |
 | 2017       | 周百建       | [Allan][2]      | https://www.linkedin.com/in/iamallanchou   |    |
