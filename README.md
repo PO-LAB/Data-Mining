@@ -105,7 +105,8 @@
 |  2019-02-21     | [總結(Summary)：Comparison of 13 Algorithms in 165 Datasets](https://machinelearningmastery.com/start-with-gradient-boosting/)   |
 
 
-### **:triangular_flag_on_post: Python**
+### **:pushpin: Python**
+### **:triangular_flag_on_post: 其他介紹**
 |  更新時間       |                      文章                                                                                                      |
 | :-----------:  | :-----------------------------------------------------------------------------------------------------:                        |
 |  2019-11-14     | [可解釋性人工智慧 Introduction to Explainable AI (XAI)](https://github.com/ITingHung/Introduction-to-Explainable-AI) |
