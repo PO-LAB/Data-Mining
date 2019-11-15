@@ -108,5 +108,5 @@
 ### **:triangular_flag_on_post: Python**
 |  更新時間       |                      文章                                                                                                      |
 | :-----------:  | :-----------------------------------------------------------------------------------------------------:                        |
-|  2019-11-14     | [Introduction to Explainable AI (XAI)](https://github.com/ITingHung/Introduction-to-Explainable-AI) |
-|  2019-11-14     | [Cost Sensitive](https://github.com/wutsungyu/Cost-Sensitive)
+|  2019-11-14     | [可解釋性人工智慧 Introduction to Explainable AI (XAI)](https://github.com/ITingHung/Introduction-to-Explainable-AI) |
+|  2019-11-14     | [代價敏感 Cost Sensitive](https://github.com/wutsungyu/Cost-Sensitive)
