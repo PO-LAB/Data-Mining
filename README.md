@@ -28,7 +28,7 @@
 [5]: https://rpubs.com/JackyCheng/AdaptiveResonanceTheory
 
 
-| 擔任年份    |  助教        |    暱稱         |         LinkedIn                           | E-mail |
+| 擔任年份    |  助教  &nbsp;&nbsp;      |    暱稱         |         LinkedIn                           | E-mail |
 |:---------: | :------------:|:---------------:|:-----------:     |:---------------------------------------------------------------------------------------:|
 | 2019下    | 詹京哲   | Ginger      | https://www.linkedin.com/in/ginger-zhan    | bmw2142@gmail.com |
 | 2019    | 鄭宇翔    | [Jacky][5]      | https://www.linkedin.com/in/yu-hsiang-cheng-2894b4169/    | zxcv9100207@gmail.com |
