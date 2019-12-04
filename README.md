@@ -28,10 +28,10 @@
 [5]: https://rpubs.com/JackyCheng/AdaptiveResonanceTheory
 
 
-| 擔任年份    |  助教名稱       |    暱稱          |         LinkedIn                           | E-mail                |
-|:---------: | :----------:|:---------------:|:-----------:      |:-----------------------------------------------:|
+| 擔任年份    |  助教名稱    |    暱稱          |         LinkedIn                          | E-mail                |
+|:----------:| :----------:|:---------------:|:------------------------------------------: |:-------------------:|
 | 2019下     | 詹京哲       | Ginger          | https://www.linkedin.com/in/ginger-zhan    | bmw2142@gmail.com      |
-| 2019       | 鄭宇翔       | [Jacky][5]      | https://www.linkedin.com/in/yu-hsiang-cheng-2894b4169/    | zxcv9100207@gmail.com |
+| 2019上       | 鄭宇翔       | [Jacky][5]      | https://www.linkedin.com/in/yu-hsiang-cheng-2894b4169/    | zxcv9100207@gmail.com |
 | 2018       | 洪佑鑫       | [Jeff][4]       | https://www.linkedin.com/in/hungyuhsin/    | s903941@yahoo.com.tw   |
 | 2018       | 吳昭賢       | [James][3]      | https://www.linkedin.com/in/iamjameswu/    | new393988911@gmail.com |
 | 2017       | 周百建       | [Allan][2]      | https://www.linkedin.com/in/iamallanchou   |    |
@@ -88,9 +88,10 @@
    
    
 
-|  更新時間       |                      文章                                                                                                      |
-| :-----------:  | :-----------------------------------------------------------------------------------------------------:                        |
-|  2017-05-19     | [線性迴歸與變異數分析(Linear Regression)](http://rpubs.com/skydome20/R-Note5-First_Practice)  | 
+|  更新時間        |                      文章                                                                                        |
+| :-----------:   | :-----------------------------------------------------------------------------------------------------:          |
+|  2017-05-19     | [線性迴歸與變異數分析(Linear Regression)](http://rpubs.com/skydome20/R-Note5-First_Practice)  |
+|  2019-12-04     | [邏輯斯迴歸(Logistic Regression)](https://rpubs.com/ginger_zhan/logistic_regression)  |
 |  2017-05-19     | [關聯式規則(Association Rule)](http://www.rpubs.com/skydome20/R-Note6-Apriori-DecisionTree)  | 
 |  2018-03-03     | [特徵選取(Feature Selection)：逐步迴歸(Stepwise Regression)與套索迴歸(LASSO)](http://rpubs.com/skydome20/R-Note18-Subsets_Shrinkage_Methods)        | 
 |  2019-03-16     | 特徵萃取(Feature Extraction)：[主成份分析(PCA)](http://rpubs.com/skydome20/R-Note7-PCA)與[獨立成分分析(ICA)](http://rpubs.com/skydome20/R-Note17-ICA)   | 
