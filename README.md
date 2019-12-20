@@ -13,7 +13,7 @@
 2. [Hastie, T., R. Tibshirani, and J. Friedman, 2009. The Elements of Statistical Learning: Data Mining, Inference, and Prediction. 2nd ed., Springer.](https://web.stanford.edu/~hastie/ElemStatLearn/)
 
 
-此 Github 網站內容主要為資料科學家 [skydome20的R系列筆記](https://github.com/skydome20/R-Notes) ，一併致謝。
+此 Github 網站內容主要為資料科學家 [skydome20的R系列筆記](https://github.com/skydome20/R-Notes) ，一併致謝。(若因 Rpubs 維修而無法閱讀文章，可參考 [R系列筆記備份資源](https://github.com/skydome20/R-Notes))
 
 ※好文分享：[2019/08/17-What’s next for the popular programming language R?](https://qz.com/1661487/hadley-wickham-on-the-future-of-r-python-and-the-tidyverse/)
 
