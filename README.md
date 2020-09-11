@@ -110,5 +110,5 @@
 ### **:triangular_flag_on_post: 其他介紹**
 |  更新時間       |                      文章                                                                                                      |
 | :-----------:  | :-----------------------------------------------------------------------------------------------------:                        |
-|  2019-11-14     | [可解釋性人工智慧 Introduction to XAI (Explainable AI)](https://github.com/ITingHung/Introduction-to-XAI) |
+|  2019-11-14     | [可解釋性人工智慧 Explainable Artificial Intelligence(XAI)](https://github.com/ITingHung/Explainable-Artificial-Intelligence-XAI-) |
 |  2019-11-14     | [代價敏感 Cost Sensitive](https://github.com/wutsungyu/Cost-Sensitive)
