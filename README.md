@@ -25,7 +25,7 @@
 [2]: http://rpubs.com/allan811118/R_programming_00
 [3]: http://rpubs.com/james_datacatcher
 [4]: http://rpubs.com/jeff_datascience/DS_Notebook
-[5]: https://rpubs.com/JackyCheng/AdaptiveResonanceTheory
+[5]: https://github.com/Jacky12Cheng
 
 
 | 擔任年份    |  助教名稱    |    暱稱          |         LinkedIn                          | E-mail                |
